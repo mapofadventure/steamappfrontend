@@ -1,0 +1,37 @@
+.App{
+  display: grid;
+  grid-template-rows: 100px 500px 500px;
+}
+.divAppForm{
+  padding: 20px 20px 20px 100px;
+  width: 50%;
+  float: left;
+  display: inline-block;
+}
+.sendMailButton{
+  background-color: transparent;
+  border: none;
+}
+.formInput{
+  border-width: 0px 0px 1px 0px;
+  font-size: 25px;
+}
+.divAppLogoRow{
+  text-align: center;
+  padding: 20px;
+  background-color: #fafafa;
+}
+.AppLogoRow{
+  display: inline-block;
+}
+.logoRow{
+  display: inline-block;
+  margin: 0 20px;
+}
+.brandLogo{
+  background-color: white;
+}
+.brandLogo:hover{
+  background-color: blue;
+  transition: ease-in-out 1s;
+}
