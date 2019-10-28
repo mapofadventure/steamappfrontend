@@ -10,8 +10,12 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
-  
+  DropdownItem,
+  Form,
+  FormGroup,
+  Input
+} from 'reactstrap';
+
 
 const AppNavbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,31 +24,28 @@ const AppNavbar = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+      <Navbar className="navbar" fixed="top" color="white" light expand="md">
+        <NavbarBrand className="brand" href="/">Steam Capitalism</NavbarBrand>
+
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
+          <Nav className="searchfilter">
+            <Form>
+              <FormGroup className="searchFormGroup">
+                <Input placeholder="Search" />
+              </FormGroup>
+            </Form>
+          </Nav>
+          <Nav className="algorithmfilter" navbar>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Algorithm
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                  Review
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
+                  Weighted
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

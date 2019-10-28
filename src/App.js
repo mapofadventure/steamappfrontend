@@ -10,14 +10,8 @@ function App() {
   return (
     <div className="App">
       <AppNavbar></AppNavbar>
-      <div>
+      <div className="divAppContent">
         <AppContent></AppContent>
-      </div>
-
-      <div>
-        <div className="divAppForm">
-          <AppForm></AppForm>
-        </div>
       </div>
 
       <div className="divAppLogoRow">
